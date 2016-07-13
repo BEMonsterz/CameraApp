@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="CameraApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fak-hg-8oS">
+                                <rect key="frame" x="226" y="127" width="148" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="b6L-0e-qX5"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Untitled-4"/>
+                                <connections>
+                                    <action selector="cameraButtonWasPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="RLG-Xp-sqH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KRF-fe-SXs">
+                                <rect key="frame" x="49" y="47" width="495" height="307"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3K-vE-wPK">
+                                <rect key="frame" x="283" y="418" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3Pc-ik-doV"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="kfa-wX-6Dy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cyan="0.22388842281879195" magenta="0.0" yellow="0.90504404362416102" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fak-hg-8oS" firstAttribute="centerY" secondItem="KRF-fe-SXs" secondAttribute="centerY" id="5TX-8G-dnH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="j3K-vE-wPK" secondAttribute="bottom" constant="152" id="7yu-sg-sTO"/>
+                            <constraint firstItem="KRF-fe-SXs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="29" id="CW3-LD-BJy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KRF-fe-SXs" secondAttribute="trailing" constant="36" id="Sz7-BO-TPa"/>
+                            <constraint firstItem="KRF-fe-SXs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="bUy-XD-V7M"/>
+                            <constraint firstItem="fak-hg-8oS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dRx-kd-oxb"/>
+                            <constraint firstItem="fak-hg-8oS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="107" id="iXw-pE-Zb7"/>
+                            <constraint firstItem="fak-hg-8oS" firstAttribute="centerX" secondItem="j3K-vE-wPK" secondAttribute="centerX" id="mwV-JQ-Npy"/>
+                            <constraint firstItem="j3K-vE-wPK" firstAttribute="top" secondItem="KRF-fe-SXs" secondAttribute="bottom" constant="64" id="nQW-BT-bS7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoView" destination="KRF-fe-SXs" id="i8T-dh-jlT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="318"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Untitled-4" width="293" height="257"/>
+    </resources>
+</document>
